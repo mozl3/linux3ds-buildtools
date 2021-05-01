@@ -1,2 +1,2 @@
 #!/bin/ash
-chroot /mnt/root /sbin/init --system
+exec chroot /mnt/root /sbin/init --system
