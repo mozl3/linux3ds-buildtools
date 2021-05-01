@@ -4,6 +4,5 @@ TOOLCHAIN_PATH=$PWD/toolchain
 PULL_TOOLCHAIN=true
 PULL_LINUX=true
 PULL_BUSYBOX=true
-#If you set this to false you'll have to provide your own rootfs.cpio.gz for now
-PULL_BUILDROOT=true
+PULL_BUILDROOT=false
 MAKE_FLAGS=-j$(nproc)
