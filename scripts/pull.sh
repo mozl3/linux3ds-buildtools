@@ -12,6 +12,20 @@ if [ $PULL_TOOLCHAIN = true ]; then
 	fi
 fi
 
+if [ $PULL_BUSYBOX = true ]; then
+	if [ ! -d "busybox/" ]; then
+		echo "Pulling busybox"
+		git clone https://github.com/mozl3/busybox
+		./scripts/build_busybox.sh
+	else
+		echo "Updating busybox"
+		cd busybox
+		git pull
+		cd ..
+		./scripts/build_busybox.sh
+	fi
+fi
+
 if [ $PULL_BUILDROOT = true ]; then
 	if [ ! -d "buildroot/" ]; then
 		echo "Pulling buildroot"
