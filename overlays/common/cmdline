@@ -1,0 +1,1 @@
+keep_bootcon fbcon=rotate:1 rdinit=/preinit
