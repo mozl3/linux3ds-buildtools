@@ -1,2 +1,7 @@
 #!/bin/ash
+mount -t tmpfs none /mnt/root/run
+cp -r /mnt/root/etc/runit /mnt/root/run/ # not really sure?
+rm /mnt/root/run/runit/stopit
+rm /mnt/root/run/runit/reboot
+rm -r /mnt/root/run/runit/runsvdir
 exec chroot /mnt/root /sbin/init 0
